@@ -1,0 +1,17 @@
+{
+    "name": "HTML Project",
+    "dockerFile": "Dockerfile",
+
+
+    "forwardPorts": [],
+    "remoteUser": "vscode",
+    "workspaceMount": "source=/workspaces/KovmirDentClinika/index.html, target=/workspace,type=bind,consistency=cached",
+    "runArgs": [
+      "--init"
+    ],
+    "postCreateCommand": "cd /workspace && npm install",
+    "overrideCommand": false
+
+
+  }
+  
