@@ -37,7 +37,7 @@ body {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   font-family: Hind, sans-serif;
   color: #a6a7aa;
@@ -301,9 +301,20 @@ fieldset[disabled] .btn-theme {
   	[Pricing]
 ------------------------------------------------------------------*/
 .pricing {
-  padding: 70px 45px;
+/*   padding: 70px 45px;
   background: #fff;
   margin-top: 50px;
+  transition: padding 0.3s, margin 0.3s; /* Додаємо плавну анімацію для зміни padding і margin */ 
+  padding: 40px 35px;
+  background: #fff;
+  margin-top: 20px;
+  transition: padding 0.3s, margin 0.3s; /* Додаємо плавну анімацію для зміни padding і margin */ 
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 250px;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -313,9 +324,18 @@ fieldset[disabled] .btn-theme {
 }
 
 .pricing.pricing-active {
-  padding-top: 110px;
+/*   padding-top: 110px;
   padding-bottom: 110px;
-  margin-top: 10px;
+  margin-top: 10px; */
+
+/*   padding-top: 110px;
+  padding-bottom: 110px;
+  margin-top: 10px; */
+
+  margin-top: 0;
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -1373,6 +1393,10 @@ fieldset[disabled] .btn-theme {
 
 .margin-b-30 {
   margin-bottom: 30px !important;
+/*   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 
 .margin-b-40 {
@@ -1565,9 +1589,17 @@ fieldset[disabled] .btn-theme {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 300px !important;
 
 }
 .contact-i {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
+.fsprice{
+  font-size: 20px;
+}
+.bg-color-sky-light.pd {
+  padding-top: 50px;
+}
+
+
