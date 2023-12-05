@@ -316,12 +316,14 @@ fieldset[disabled] .btn-theme {
   height: 250px;
   position: relative;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   .pricing {
     margin-top: 0;
   }
+
 }
 
 .pricing.pricing-active {
