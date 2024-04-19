@@ -437,7 +437,9 @@ fieldset[disabled] .btn-theme {
 .promo-block .promo-block-title {
   margin-top: 20%;
   font-size: 50px;
-  color: #fff;
+  /* color: #fff; */
+  /* color: #17bed2; */
+  color:#7064a9;
 }
 
 @media (max-width: 480px) {
@@ -1595,6 +1597,10 @@ fieldset[disabled] .btn-theme {
 
 }
 .contact-i {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.contact-i-N {
   margin-bottom: 20px;
   font-size: 20px;
 }
