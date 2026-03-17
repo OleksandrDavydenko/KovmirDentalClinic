@@ -2077,6 +2077,55 @@ h2 {
   color: #2f6f88;
 }
 
+.contact-messenger-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 4px 0 18px;
+}
+
+.contact-messenger-btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  border: 1px solid transparent;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.contact-messenger-btn:hover,
+.contact-messenger-btn:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(47, 58, 75, 0.15);
+}
+
+.contact-messenger-btn-telegram {
+  background: #2aabee;
+  border-color: #2299d8;
+  color: #fff;
+}
+
+.contact-messenger-btn-telegram:hover,
+.contact-messenger-btn-telegram:focus {
+  background: #209ad8;
+  color: #fff;
+}
+
+.contact-messenger-btn-viber {
+  background: #7360f2;
+  border-color: #6553dd;
+  color: #fff;
+}
+
+.contact-messenger-btn-viber:hover,
+.contact-messenger-btn-viber:focus {
+  background: #6553dd;
+  color: #fff;
+}
+
 .contact-meta-wrap {
   text-align: center;
 }
@@ -2182,6 +2231,18 @@ h2 {
 
   .contact-i {
     font-size: 17px;
+  }
+
+  .contact-messenger-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 10px;
+  }
+
+  .contact-messenger-btn {
+    text-align: center;
+    width: 100%;
   }
 
   .contact-map {
