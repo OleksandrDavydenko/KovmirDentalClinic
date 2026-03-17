@@ -2150,23 +2150,73 @@ h2 {
 }
 
 .footer-social-title {
-  margin: 30px;
-  color: #3a6881;
-  font-size: 20px;
+  margin: 0 0 12px;
+  color: #2f5a74;
+  font-size: 34px;
+  line-height: 1.2;
 }
 
 .social-icon {
+  font-size: 28px;
+  margin-right: 0;
+}
+
+.footer-social-wrap {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.footer-social-subtitle {
+  max-width: 740px;
+  margin: 0 auto 28px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #5f6f82;
+}
+
+.footer-social-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-social-card {
+  min-width: 220px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 22px;
+  border-radius: 12px;
+  border: 1px solid #d6e1ea;
+  background: #fff;
+  color: #2f5a74;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 18px rgba(47, 58, 75, 0.08);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.footer-social-card:hover,
+.footer-social-card:focus {
+  transform: translateY(-2px);
+  border-color: #b9cedd;
+  box-shadow: 0 12px 24px rgba(47, 58, 75, 0.14);
+}
+
+.footer-social-card-facebook {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+}
+
+.footer-social-card-instagram {
+  background: linear-gradient(180deg, #ffffff 0%, #fff7fb 100%);
+}
+
+.footer-social-name {
   font-size: 20px;
-  margin-right: 8px;
-}
-
-.footer .footer-list-item a {
-  color: #36546f;
-  font-weight: 600;
-}
-
-.footer .footer-list-item a:hover {
-  color: #2f6f88;
+  line-height: 1;
 }
 
 .powered-link {
@@ -2250,7 +2300,32 @@ h2 {
   }
 
   .footer-social-title {
-    margin: 20px 0 20px;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .footer-social-subtitle {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .footer-social-grid {
+    gap: 10px;
+  }
+
+  .footer-social-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 330px;
+    padding: 14px 18px;
+  }
+
+  .social-icon {
+    font-size: 24px;
+  }
+
+  .footer-social-name {
+    font-size: 18px;
   }
 
   .section-title {
