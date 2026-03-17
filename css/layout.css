@@ -1848,6 +1848,13 @@ h2 {
   color: #2d4258;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
 .header .navbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.28);
   background: linear-gradient(180deg, rgba(18, 45, 64, 0.42) 0%, rgba(18, 45, 64, 0.12) 78%, rgba(18, 45, 64, 0) 100%);
@@ -1914,22 +1921,28 @@ h2 {
   margin-bottom: 20px;
 }
 
-#team .team-member > * {
+#team .team-member,
+.why-choose-item,
+#pricing .pricing {
   background: #fff;
+  border: 1px solid #dde8ef;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(47, 58, 75, 0.07);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+}
+
+#team .team-member:hover,
+.why-choose-item:hover,
+#pricing .pricing:hover,
+#pricing .pricing.pricing-active {
+  transform: translateY(-3px);
+  border-color: #c7d8e3;
+  box-shadow: 0 12px 28px rgba(47, 58, 75, 0.11);
+  background-color: #fbfdff;
 }
 
 #team .team-member {
   padding: 22px;
-  border: 1px solid #e2ebf1;
-  border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(47, 58, 75, 0.06);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-
-#team .team-member:hover {
-  transform: translateY(-4px);
-  border-color: #d5deea;
-  box-shadow: 0 12px 28px rgba(47, 58, 75, 0.1);
 }
 
 .team-name {
@@ -1951,27 +1964,24 @@ h2 {
 
 .pricing-title {
   text-align: center;
-  margin-bottom: -24px;
+  margin-bottom: 0;
+  padding-top: 8px;
   color: #2e4b63;
 }
 
 #pricing .pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: auto;
   min-height: 248px;
   margin-top: 18px;
   margin-bottom: 18px;
   padding: 30px 28px;
-  border: 1px solid #dde9f1;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(47, 58, 75, 0.06);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
-#pricing .pricing:hover,
-#pricing .pricing.pricing-active {
-  transform: translateY(-3px);
-  border-color: #c6dbe8;
-  box-shadow: 0 12px 26px rgba(47, 58, 75, 0.1);
+#pricing .pricing .margin-b-30 {
+  margin-bottom: 18px;
 }
 
 #pricing .pricing h3 {
@@ -1996,6 +2006,18 @@ h2 {
 #pricing .btn-default-bg:focus {
   background: #2f6f88;
   color: #fff;
+}
+
+#pricing .row .col-sm-4:nth-child(1) .pricing {
+  border-top: 2px solid #99bfd1;
+}
+
+#pricing .row .col-sm-4:nth-child(2) .pricing {
+  border-top: 2px solid #8eb4c8;
+}
+
+#pricing .row .col-sm-4:nth-child(3) .pricing {
+  border-top: 2px solid #83aabd;
 }
 
 .pricing-note-wrap {
@@ -2092,6 +2114,10 @@ h2 {
   #team .team-member {
     padding: 18px;
   }
+
+  .section-title {
+    font-size: 34px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2114,7 +2140,8 @@ h2 {
   }
 
   .pricing-title {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    padding-top: 0;
   }
 
   #pricing .pricing {
@@ -2135,6 +2162,10 @@ h2 {
 
   .footer-social-title {
     margin: 20px 0 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
   }
 }
 
