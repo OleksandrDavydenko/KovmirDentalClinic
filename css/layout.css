@@ -498,6 +498,73 @@ fieldset[disabled] .btn-theme {
 }
 
 /*------------------------------------------------------------------
+    [Why Choose Us]
+------------------------------------------------------------------*/
+.why-choose {
+  background: #fff;
+}
+
+.why-choose .margin-b-60 {
+  margin-bottom: 60px;
+}
+
+.why-choose-grid {
+  background: #f3f3f3;
+}
+
+.why-choose-item {
+  padding: 10px 10px 0;
+}
+
+.why-choose-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 38px;
+  color: #2f3a4b;
+  margin-right: 18px;
+}
+
+.why-choose-title-wrap {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.why-choose-item h3 {
+  color: #2f3a4b;
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.why-choose-item p {
+  font-size: 19px;
+  line-height: 1.55;
+  color: #2f3a4b;
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .why-choose-item h3 {
+    font-size: 34px;
+  }
+
+  .why-choose-item p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-choose-item {
+    text-align: left;
+  }
+
+  .why-choose-item h3 {
+    font-size: 30px;
+  }
+}
+
+/*------------------------------------------------------------------
   	[Work]
 ------------------------------------------------------------------*/
 /* Overlay */
