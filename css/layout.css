@@ -1836,25 +1836,26 @@ fieldset[disabled] .btn-theme {
 ------------------------------------------------------------------*/
 body {
   color: #435063;
-  background: linear-gradient(180deg, #fbfcfe 0%, #ffffff 34%, #fbfcff 100%);
+  background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 36%, #f8fbfd 100%);
 }
 
 p {
-  color: #667488;
+  color: #5f6f82;
 }
 
 h2 {
   letter-spacing: 0.2px;
+  color: #2d4258;
 }
 
 .header .navbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.28);
-  background: linear-gradient(180deg, rgba(15, 26, 42, 0.4) 0%, rgba(15, 26, 42, 0.1) 80%, rgba(15, 26, 42, 0) 100%);
+  background: linear-gradient(180deg, rgba(18, 45, 64, 0.42) 0%, rgba(18, 45, 64, 0.12) 78%, rgba(18, 45, 64, 0) 100%);
   backdrop-filter: blur(2px);
 }
 
 .header .nav-item-child {
-  color: #f1f5fb;
+  color: #f5f9fc;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -1866,16 +1867,16 @@ h2 {
 }
 
 .page-on-scroll .header .nav-item-child {
-  color: #3c4a5f;
+  color: #355069;
   text-shadow: none;
 }
 
 .promo-block:before {
-  background: linear-gradient(120deg, rgba(244, 248, 255, 0.8) 0%, rgba(240, 245, 253, 0.6) 45%, rgba(228, 236, 248, 0.62) 100%);
+  background: linear-gradient(120deg, rgba(241, 249, 252, 0.84) 0%, rgba(233, 244, 249, 0.66) 44%, rgba(220, 235, 243, 0.7) 100%);
 }
 
 .promo-block .promo-block-title {
-  color: #445a79;
+  color: #2d4d66;
   font-size: 58px;
   line-height: 1.15;
   letter-spacing: 0.4px;
@@ -1883,7 +1884,7 @@ h2 {
 }
 
 .promo-block .promo-subtitle {
-  color: #5f7698;
+  color: #3f6b83;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -1892,16 +1893,16 @@ h2 {
 .promo-block .btn-theme-md {
   border-radius: 999px;
   padding: 18px 34px;
-  box-shadow: 0 10px 24px rgba(68, 90, 121, 0.2);
+  box-shadow: 0 10px 24px rgba(45, 77, 102, 0.2);
 }
 
 .promo-block .btn-white-bg {
-  color: #3f5471;
+  color: #2d546d;
 }
 
 .promo-block .btn-white-bg:hover,
 .promo-block .btn-white-bg:focus {
-  background: #5f7698;
+  background: #2f6f88;
 }
 
 #team .content-lg {
@@ -1919,7 +1920,7 @@ h2 {
 
 #team .team-member {
   padding: 22px;
-  border: 1px solid #e8edf4;
+  border: 1px solid #e2ebf1;
   border-radius: 14px;
   box-shadow: 0 8px 22px rgba(47, 58, 75, 0.06);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -1939,7 +1940,7 @@ h2 {
 .team-role {
   font-size: 17px;
   font-weight: 600;
-  color: #6882a4;
+  color: #3f738e;
   margin-bottom: 10px;
 }
 
@@ -1951,7 +1952,7 @@ h2 {
 .pricing-title {
   text-align: center;
   margin-bottom: -24px;
-  color: #3e5068;
+  color: #2e4b63;
 }
 
 #pricing .pricing {
@@ -1960,7 +1961,7 @@ h2 {
   margin-top: 18px;
   margin-bottom: 18px;
   padding: 30px 28px;
-  border: 1px solid #e6ebf2;
+  border: 1px solid #dde9f1;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(47, 58, 75, 0.06);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -1969,12 +1970,12 @@ h2 {
 #pricing .pricing:hover,
 #pricing .pricing.pricing-active {
   transform: translateY(-3px);
-  border-color: #d2dbe8;
+  border-color: #c6dbe8;
   box-shadow: 0 12px 26px rgba(47, 58, 75, 0.1);
 }
 
 #pricing .pricing h3 {
-  color: #3b4d66;
+  color: #2f4d65;
   line-height: 1.32;
   min-height: 58px;
 }
@@ -1987,13 +1988,13 @@ h2 {
 }
 
 #pricing .btn-default-bg {
-  background: #eef3fa;
-  color: #3e5472;
+  background: #e8f2f7;
+  color: #2f5f79;
 }
 
 #pricing .btn-default-bg:hover,
 #pricing .btn-default-bg:focus {
-  background: #5f7698;
+  background: #2f6f88;
   color: #fff;
 }
 
@@ -2004,7 +2005,7 @@ h2 {
 
 .pricing-note-text {
   font-size: 14px;
-  color: #5d697a;
+  color: #526375;
 }
 
 #contact {
@@ -2015,7 +2016,7 @@ h2 {
 .contact-title {
   margin-top: 10px;
   margin-bottom: 24px;
-  color: #3f5169;
+  color: #2f4d65;
 }
 
 .gmap .contact-i {
@@ -2023,7 +2024,7 @@ h2 {
 }
 
 .gmap a.contact-i:hover {
-  color: #5f7698;
+  color: #2f6f88;
 }
 
 .contact-meta-wrap {
@@ -2036,6 +2037,12 @@ h2 {
   box-shadow: 0 10px 20px rgba(47, 58, 75, 0.1);
 }
 
+.contact-cta:hover,
+.contact-cta:focus {
+  background: #2f6f88;
+  color: #fff;
+}
+
 .contact-map {
   margin-top: 25px;
   border: 0;
@@ -2045,7 +2052,7 @@ h2 {
 
 .footer-social-title {
   margin: 30px;
-  color: #5f7698;
+  color: #3a6881;
   font-size: 20px;
 }
 
@@ -2055,12 +2062,12 @@ h2 {
 }
 
 .footer .footer-list-item a {
-  color: #4b5c74;
+  color: #36546f;
   font-weight: 600;
 }
 
 .footer .footer-list-item a:hover {
-  color: #5f7698;
+  color: #2f6f88;
 }
 
 .powered-link {
