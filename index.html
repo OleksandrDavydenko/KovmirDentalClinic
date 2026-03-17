@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="no-js">
+<html lang="uk" class="no-js">
 <!-- BEGIN HEAD -->
 
 <head>
@@ -14,12 +14,15 @@
         name="description" />
     <meta name="keywords"
         content="стоматологія, стоматологічна клініка, лікування зубів, Вишгород, Ковмір, імплантація зубів, протезування, Естетична стоматологія, Лікування кореневих каналів, Гігієна порожнини рота, Стоматологічна клініка у Вишгороді,  Найкращі стоматологи у місті Вишгород, Сімейний стоматолог, Екстрене лікування зубів, Здорові зуби, Професійна стоматологічна допомога, Якісне лікування зубів, Індивідуальний підхід до пацієнтів, Модерні методи лікування зубів, Набережна 6, ковмірдент">
-    <meta property="og:locale:alternate" content="uk_UA">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:title" content="Kovmir Dental - стоматологічна клініка у Вишгороді">
+    <meta property="og:description"
+        content="Стоматологічна клініка Kovmir Dental у Вишгороді: сучасне лікування, профілактика та професійний підхід до кожного пацієнта.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.kovmir-dental.com/" />
 
     <!-- GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
@@ -33,15 +36,16 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.png" />
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZHZXYJBTR"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-6ZHZXYJBTR');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZHZXYJBTR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6ZHZXYJBTR');
+    </script>
+</head>
 <!-- END HEAD -->
 
 <!-- BODY -->
@@ -63,8 +67,8 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a class="logo-wrap" href="#body">
-                            <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
-                            <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                            <img class="logo-img logo-img-main" src="img/logo.png" alt="Kovmir Dental logo">
+                            <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Kovmir Dental logo">
                         </a>
                     </div>
                     <!-- End Logo -->
@@ -75,7 +79,7 @@
                     <div class="menu-container">
                         <ul class="nav navbar-nav navbar-nav-right">
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
-                                    href="#body">Home</a></li>
+                                    href="#body">Головна</a></li>
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#team">НАША
                                     КОМАНДА</a></li>
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
@@ -130,11 +134,10 @@
                 <div class="col-sm-4 sm-margin-b-50">
                     <div class="margin-b-20">
                         <img class="img-thumbnail img-responsive wow fadeIn" src="img/970x647/01.jpg"
-                            alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".1s">
+                            alt="Лікар Ковмір Леонід" loading="lazy" data-wow-duration=".3" data-wow-delay=".1s">
                     </div>
-                    <h4><a>Ковмір Леонід</a>
-                        <p>Головний лікар</p>
-                    </h4>
+                    <h4 class="team-name">Ковмір Леонід</h4>
+                    <p class="team-role">Головний лікар</p>
                     <p>
                         Стоматолог-хірург-ортопед із 20 ти річним досвідом в галузі стоматологіі.
                         З ним ви завжди впевнені у результаті</p>
@@ -146,11 +149,10 @@
                 <div class="col-sm-4 sm-margin-b-50">
                     <div class="margin-b-20">
                         <img class="img-thumbnail img-responsive wow fadeIn" src="img/970x647/02.jpg"
-                            alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".2s">
+                            alt="Лікар Ковмір Євгенія" loading="lazy" data-wow-duration=".3" data-wow-delay=".2s">
                     </div>
-                    <h4><a>Ковмір Євгенія</a>
-                        <p>Терапевт-ортопед</p>
-                    </h4>
+                    <h4 class="team-name">Ковмір Євгенія</h4>
+                    <p class="team-role">Терапевт-ортопед</p>
                     <p>Стоматолог-терапевт-ортопед.
                         Досвід роботи 15 років.
                         Знайде підхід до кожного пацієнта з увагою до найменших деталей.</p>
@@ -396,12 +398,13 @@
         <!-- Google Map -->
         <div class="gmap">
             <h2 style="margin-top: 30px;">Контакти</h2>
-            <a class="contact-i" href="https://t.me/+380738820180" target="_blank" rel="noopener"><i></i>Телефон: +38
-                (073) 882 01 80</a>
+            <a class="contact-i" href="tel:+380738820180">Телефон: +38 (073) 882 01 80</a>
+            <a class="contact-i" href="https://t.me/+380738820180" target="_blank" rel="noopener">Telegram для швидкого
+                зв'язку</a>
 
 
-            <a class="contact-i" href="https://maps.app.goo.gl/64u57VuKN9HLo7ca8" target="_blank">м. Вишгород, вул.
-                Набережна 6-в</a>
+            <a class="contact-i" href="https://maps.app.goo.gl/64u57VuKN9HLo7ca8" target="_blank" rel="noopener">м.
+                Вишгород, вул. Набережна 6-в</a>
             <p class="contact-i">ФОП Ковмір Євгенія Олегівна</p>
             <div style="text-align: center">
                 <p class="contact-i">Ліцензія МОЗ на підставі наказу 2178/23/М від 20.12.2023</p>
@@ -411,10 +414,10 @@
                 href="https://bookon.ua/lite/KovmirDentalClinic?fbclid=PAZXh0bgNhZW0CMTEAAaY1B2b35iOUTRmlcM4VLZKLfMAZ4ZmsempE7ANW2Uh5JcDtQJDB53kzXEI_aem_njXr91vhFV6RyzE-P4n_mg"
                 target="_blank" rel="noopener" style="margin-top: 20px"><i
                     class="btn-icon icon-control-play"></i>Записатися на консультацію</a>
-            <iframe style="margin-top: 25px;"
+            <iframe style="margin-top: 25px; border: 0;"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2533.3131523725137!2d30.495320500000002!3d50.5841326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d3279f1f81b5%3A0x60b29e889cfd0353!2sKovmir%20Dental%20Clinic!5e0!3m2!1sru!2sua!4v1702049256646!5m2!1sru!2sua"
-                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="100%" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Kovmir Dental Clinic на карті"></iframe>
 
 
         </div>
@@ -442,14 +445,14 @@
 
                             <li class="footer-list-item">
                                 <a href="https://www.facebook.com/profile.php?id=61554185199075">
-                                    <span class="icon-social-facebook" alt="Facebook" style="font-size: 20px;" />
+                                    <span class="icon-social-facebook" style="font-size: 20px;"></span>
                                     Facebook
                                 </a>
                             </li>
                             <li class="footer-list-item">
                                 <a
                                     href="https://instagram.com/kovmir_dentalclinic?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr">
-                                    <span class="icon-social-instagram" alt="Facebook" style="font-size: 20px;" />
+                                    <span class="icon-social-instagram" style="font-size: 20px;"></span>
                                     Instagram
                                 </a>
                             </li>
@@ -473,7 +476,7 @@
             <div class="row">
                 <div class="col-xs-6">
                     <a href="#body">
-                        <img class="footer-logo" src="img/logo-dark.png" alt="Aironepage Logo">
+                        <img class="footer-logo" src="img/logo-dark.png" alt="Kovmir Dental logo">
                     </a>
 
                 </div>
