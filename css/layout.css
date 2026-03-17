@@ -572,6 +572,15 @@ fieldset[disabled] .btn-theme {
   padding-bottom: 66px;
 }
 
+.why-choose-items .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.why-choose-items .row > [class*="col-"] {
+  display: flex;
+}
+
 .why-choose-items:before {
   content: "";
   position: absolute;
@@ -583,6 +592,7 @@ fieldset[disabled] .btn-theme {
 
 .why-choose-item {
   height: 100%;
+  width: 100%;
   background: #fff;
   padding: 28px 22px 24px;
   border: 1px solid #ebeff5;
@@ -688,6 +698,14 @@ fieldset[disabled] .btn-theme {
   .why-choose-items {
     padding-top: 34px;
     padding-bottom: 44px;
+  }
+
+  .why-choose-items .row {
+    display: block;
+  }
+
+  .why-choose-items .row > [class*="col-"] {
+    display: block;
   }
 
   .why-choose-items:before {
