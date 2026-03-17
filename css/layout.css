@@ -1924,10 +1924,6 @@ h2 {
 #team .team-member,
 .why-choose-item,
 #pricing .pricing {
-  background: #fff;
-  border: 1px solid #dde8ef;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(47, 58, 75, 0.07);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
 }
 
@@ -1951,6 +1947,12 @@ h2 {
   border-radius: 12px;
   padding: 0;
   box-shadow: none;
+}
+
+#team .team-member img {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal;
 }
 
 .team-name {
