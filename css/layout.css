@@ -516,10 +516,10 @@ fieldset[disabled] .btn-theme {
   position: relative;
   overflow: hidden;
   background: #fff;
-  border: 1px solid #e5eaf0;
+  border: 1px solid #e8edf3;
   border-radius: 14px;
   padding: 48px 54px;
-  box-shadow: 0 12px 34px rgba(47, 58, 75, 0.08);
+  box-shadow: 0 8px 22px rgba(47, 58, 75, 0.06);
 }
 
 .why-choose-highlight:before {
@@ -528,8 +528,8 @@ fieldset[disabled] .btn-theme {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #8fa5c3 0%, #5f7698 100%);
+  height: 3px;
+  background: linear-gradient(90deg, #a7b7cc 0%, #8ea3bf 100%);
 }
 
 .why-choose-highlight h2 {
@@ -578,23 +578,23 @@ fieldset[disabled] .btn-theme {
   top: 18px;
   left: 15px;
   right: 15px;
-  border-top: 1px solid #e8edf3;
+  border-top: 1px solid #edf1f6;
 }
 
 .why-choose-item {
   height: 100%;
   background: #fff;
   padding: 28px 22px 24px;
-  border: 1px solid #e7ecf2;
+  border: 1px solid #ebeff5;
   border-radius: 12px;
   transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease, background-color .25s ease;
 }
 
 .why-choose-item:hover {
-  border-color: #c6d0dd;
-  box-shadow: 0 12px 30px rgba(47, 58, 75, 0.12);
-  transform: translateY(-4px);
-  background-color: #fcfdff;
+  border-color: #d8e0ea;
+  box-shadow: 0 8px 18px rgba(47, 58, 75, 0.08);
+  transform: translateY(-2px);
+  background-color: #fdfefe;
 }
 
 .why-choose-icon {
@@ -605,9 +605,9 @@ fieldset[disabled] .btn-theme {
   text-align: center;
   flex-shrink: 0;
   font-size: 24px;
-  color: #435d7d;
-  background: #edf2f8;
-  border: 1px solid #d9e2ee;
+  color: #536b89;
+  background: #f2f5fa;
+  border: 1px solid #e2e8f1;
   border-radius: 50%;
   margin-right: 18px;
 }
@@ -633,15 +633,15 @@ fieldset[disabled] .btn-theme {
 }
 
 .why-choose-items .col-sm-4:nth-child(1) .why-choose-item {
-  border-top: 3px solid #8ba3c2;
+  border-top: 2px solid #a8b8cc;
 }
 
 .why-choose-items .col-sm-4:nth-child(2) .why-choose-item {
-  border-top: 3px solid #7f97b7;
+  border-top: 2px solid #9cb0c8;
 }
 
 .why-choose-items .col-sm-4:nth-child(3) .why-choose-item {
-  border-top: 3px solid #728bad;
+  border-top: 2px solid #90a8c3;
 }
 
 @media (max-width: 992px) {
