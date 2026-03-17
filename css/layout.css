@@ -2179,44 +2179,62 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
 }
 
-.footer-social-card {
+.footer .footer-social-wrap .footer-social-card {
   min-width: 220px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
-  padding: 16px 22px;
-  border-radius: 12px;
-  border: 1px solid #d6e1ea;
-  background: #fff;
-  color: #2f5a74;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: #2f6f88;
+  color: #ffffff !important;
   font-weight: 700;
   letter-spacing: 0.2px;
-  box-shadow: 0 8px 18px rgba(47, 58, 75, 0.08);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 10px 22px rgba(20, 39, 53, 0.24);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, opacity .2s ease;
+  opacity: 1;
 }
 
-.footer-social-card:hover,
-.footer-social-card:focus {
+.footer .footer-social-wrap .footer-social-card:hover,
+.footer .footer-social-wrap .footer-social-card:focus {
   transform: translateY(-2px);
-  border-color: #b9cedd;
-  box-shadow: 0 12px 24px rgba(47, 58, 75, 0.14);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 14px 28px rgba(20, 39, 53, 0.32);
+  opacity: 1;
 }
 
 .footer-social-card-facebook {
-  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+  background: linear-gradient(135deg, #1877f2 0%, #135ec2 100%);
 }
 
 .footer-social-card-instagram {
-  background: linear-gradient(180deg, #ffffff 0%, #fff7fb 100%);
+  background: linear-gradient(135deg, #fd5949 0%, #d6249f 55%, #285aeb 100%);
+}
+
+.footer-social-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
 }
 
 .footer-social-name {
   font-size: 20px;
   line-height: 1;
+  color: #fff;
+}
+
+.footer-social-hint {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .powered-link {
@@ -2313,6 +2331,10 @@ h2 {
     gap: 10px;
   }
 
+
+  .footer-social-hint {
+    font-size: 11px;
+  }
   .footer-social-card {
     width: 100%;
     min-width: 0;
