@@ -1945,6 +1945,14 @@ h2 {
   padding: 22px;
 }
 
+#team .img-thumbnail {
+  background: transparent;
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: none;
+}
+
 .team-name {
   margin-bottom: 4px;
   color: #344458;
