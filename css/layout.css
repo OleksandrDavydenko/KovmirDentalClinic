@@ -509,57 +509,70 @@ fieldset[disabled] .btn-theme {
 }
 
 .why-choose-highlight-wrap {
-  padding: 68px 0 62px;
+  padding: 0;
 }
 
+/* Без білої картки й тіні — досить тонованого фону секції (bg-color-sky-light),
+   щоб відділити блок від сусідів. Менше вкладених "коробок" = легше сприймається */
 .why-choose-highlight {
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid #e8edf3;
-  border-radius: 14px;
-  padding: 48px 54px;
-  box-shadow: 0 8px 22px rgba(47, 58, 75, 0.06);
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.why-choose-highlight:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #a7b7cc 0%, #8ea3bf 100%);
+.why-choose-highlight-head {
+  margin-bottom: 36px;
 }
 
 .why-choose-highlight h2 {
-  color: #2f3a4b;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1.25;
-  max-width: 920px;
+  margin-bottom: 12px;
+}
+
+.why-choose-lead {
+  max-width: 560px;
   margin: 0 auto;
-  margin-bottom: 0;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
-.why-choose-intro-row {
-  margin-top: 8px;
+/* Замість чотирьох суцільних абзаців — компактний список:
+   коротке твердження жирним + одне пояснювальне речення */
+.why-choose-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
 }
 
-.why-choose-intro p {
-  font-size: 20px;
-  line-height: 1.7;
-  color: #435063;
-  margin-bottom: 16px;
+.why-choose-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.why-choose-intro p:first-child {
-  font-size: 22px;
-  line-height: 1.68;
-  color: #2f3a4b;
+.why-choose-checklist li strong {
+  color: #2f4d65;
 }
 
-.why-choose-intro p:last-child {
-  margin-bottom: 0;
+.why-choose-check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  font-size: 11px;
+  color: #2f6f88;
+  background: #eaf3f7;
+  border-radius: 50%;
 }
 
 .why-choose-grid {
@@ -655,21 +668,8 @@ fieldset[disabled] .btn-theme {
 }
 
 @media (max-width: 992px) {
-  .why-choose-highlight {
-    padding: 38px 34px;
-  }
-
   .why-choose-highlight h2 {
-    font-size: 34px;
-  }
-
-  .why-choose-intro p {
-    font-size: 18px;
-    line-height: 1.65;
-  }
-
-  .why-choose-intro p:first-child {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .why-choose-item h3 {
@@ -682,17 +682,17 @@ fieldset[disabled] .btn-theme {
 }
 
 @media (max-width: 767px) {
-  .why-choose-highlight-wrap {
-    padding: 46px 0 42px;
-  }
-
-  .why-choose-highlight {
-    padding: 30px 20px;
-    border-radius: 10px;
+  .why-choose-highlight-head {
+    margin-bottom: 28px;
   }
 
   .why-choose-highlight h2 {
-    font-size: 28px;
+    font-size: 25px;
+  }
+
+  .why-choose-checklist {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .why-choose-items {
@@ -1896,40 +1896,6 @@ h2 {
   text-shadow: none;
 }
 
-.promo-block:before {
-  background: rgba(81, 87, 105, 0.2);
-}
-
-.promo-block .promo-block-title {
-  color: #7064a9;
-  font-size: 50px;
-  line-height: 1.15;
-  letter-spacing: 0;
-  text-shadow: none;
-}
-
-.promo-block .promo-subtitle {
-  color: #7064a9;
-  font-size: 25px;
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-.promo-block .btn-theme-md {
-  border-radius: 999px;
-  padding: 18px 34px;
-  box-shadow: 0 10px 24px rgba(45, 77, 102, 0.2);
-}
-
-.promo-block .btn-white-bg {
-  color: #2d546d;
-}
-
-.promo-block .btn-white-bg:hover,
-.promo-block .btn-white-bg:focus {
-  background: #2f6f88;
-}
-
 #team .content-lg {
   padding-top: 92px;
   padding-bottom: 86px;
@@ -2247,15 +2213,6 @@ h2 {
     backdrop-filter: none;
   }
 
-  .promo-block .promo-block-title {
-    font-size: 46px;
-    margin-top: 26%;
-  }
-
-  .promo-block .promo-subtitle {
-    font-size: 24px;
-  }
-
   #team .team-member {
     padding: 18px;
   }
@@ -2269,19 +2226,6 @@ h2 {
   .content-lg {
     padding-top: 72px;
     padding-bottom: 72px;
-  }
-
-  .promo-block {
-    padding: 180px 0 130px;
-  }
-
-  .promo-block .promo-block-title {
-    font-size: 37px;
-    margin-top: 16%;
-  }
-
-  .promo-block .promo-subtitle {
-    font-size: 21px;
   }
 
   .pricing-title {
@@ -2356,3 +2300,1492 @@ h2 {
 }
 
 
+
+/*==================================================================
+    [ЕТАП 1. КОНВЕРСІЯ У ДЗВІНОК]
+    Телефон по всій сторінці, новий перший екран, блок гострого болю,
+    відгуки Google, плаваюча панель дзвінка на мобільних.
+==================================================================*/
+
+[hidden] {
+  display: none !important;
+}
+
+/*------------------------------------------------------------------
+    [Кнопки дзвінка та запису]
+------------------------------------------------------------------*/
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border: 1px solid #2f6f88;
+  border-radius: 999px;
+  background: #2f6f88;
+  color: #ffffff !important;
+  font-family: Hind, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 22px rgba(47, 111, 136, 0.26);
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.btn-call:hover,
+.btn-call:focus {
+  background: #26596e;
+  border-color: #26596e;
+  color: #ffffff !important;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(47, 111, 136, 0.34);
+}
+
+.btn-call .btn-icon {
+  top: 0;
+  margin-right: 0;
+  font-size: 18px;
+}
+
+.btn-call-lg {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "icon label" "icon number";
+  align-items: center;
+  column-gap: 14px;
+  padding: 15px 32px;
+  text-align: left;
+}
+
+.btn-call-lg .btn-icon {
+  grid-area: icon;
+  font-size: 26px;
+}
+
+.btn-call-lg .btn-call-label {
+  grid-area: label;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.btn-call-lg .btn-call-number {
+  grid-area: number;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.btn-call-danger {
+  background: #c9573a;
+  border-color: #c9573a;
+  box-shadow: 0 10px 22px rgba(201, 87, 58, 0.28);
+}
+
+.btn-call-danger:hover,
+.btn-call-danger:focus {
+  background: #b1462c;
+  border-color: #b1462c;
+  box-shadow: 0 14px 28px rgba(201, 87, 58, 0.36);
+}
+
+.btn-call-outline {
+  background: #ffffff;
+  border: 1px solid #9dc2d3;
+  color: #2f6f88 !important;
+}
+
+.btn-call-outline:hover,
+.btn-call-outline:focus {
+  background: #2f6f88;
+  border-color: #2f6f88;
+  color: #ffffff !important;
+}
+
+.btn-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border: 1px solid #b9d2de;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #2f5f79 !important;
+  font-family: Hind, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.btn-book:hover,
+.btn-book:focus {
+  background: #ffffff;
+  border-color: #2f6f88;
+  color: #2f6f88 !important;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn-book-lg {
+  padding: 18px 30px;
+  font-size: 16px;
+}
+
+/*------------------------------------------------------------------
+    [Телефон у шапці]
+------------------------------------------------------------------*/
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+}
+
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #2f4d65;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.header-phone:hover,
+.header-phone:focus {
+  color: #2f6f88;
+  text-decoration: none;
+}
+
+.header-phone-icon {
+  font-size: 17px;
+  color: #2f6f88;
+}
+
+.header-schedule {
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7c8a97;
+  white-space: nowrap;
+}
+
+/* Поки сторінка не прокручена, шапка прозора поверх світлого фото */
+.header .header-phone {
+  color: #2f4d65;
+}
+
+.header .header-schedule {
+  color: #6f7e8c;
+}
+
+/* Розкладка шапки: логотип | меню | телефон */
+.header .navbar > .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header .navbar > .container:before,
+.header .navbar > .container:after {
+  display: none;
+}
+
+.header .navbar > .container > .menu-container.js_nav-item {
+  flex: 0 0 auto;
+}
+
+.header .navbar > .container > .header-contact {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.header .navbar > .container > .nav-collapse {
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .header .navbar > .container {
+    flex-wrap: nowrap;
+  }
+
+  .header .navbar > .container > .nav-collapse {
+    flex: 1 1 auto;
+    width: auto;
+  }
+
+  .header .navbar > .container > .header-contact {
+    margin-left: 26px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .header .nav-item-child {
+    padding: 20px 11px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .navbar > .container > .menu-container.js_nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header .navbar-toggle {
+    float: none;
+    margin: 0;
+  }
+
+  .header .logo {
+    float: none;
+    width: auto;
+    height: auto;
+    line-height: 1;
+  }
+
+  .header-phone {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 575px) {
+  .header .logo-img {
+    width: 112px;
+  }
+
+  .header-schedule {
+    display: none;
+  }
+
+  .header-phone {
+    gap: 0;
+    width: 42px;
+    height: 42px;
+    justify-content: center;
+    border-radius: 50%;
+    background: #2f6f88;
+    box-shadow: 0 6px 14px rgba(47, 111, 136, 0.28);
+  }
+
+  .header-phone-number {
+    display: none;
+  }
+
+  .header-phone-icon {
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+
+/*------------------------------------------------------------------
+    [Перший екран]
+    Фото лікарів — у окремому боксі праворуч, а не на весь фон:
+    так текст завжди читається однаково, без завіс і градієнтів
+    поверх обличчя. На мобільних (<768px) бокс з фото ховається —
+    лишається тільки текст і кнопки.
+------------------------------------------------------------------*/
+.promo-block {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  /* скасовуємо фонове фото теми — тепер фото у своєму боксі */
+  background: linear-gradient(180deg, #f5f9fb 0%, #eef5f9 100%);
+  padding: 150px 0 64px;
+}
+
+.promo-block:before {
+  content: none;
+}
+
+.promo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.promo-content {
+  flex: 1 1 520px;
+  max-width: 600px;
+}
+
+.promo-block .promo-block-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: #2f4d65;
+  text-shadow: none;
+}
+
+.promo-block .promo-block-text,
+.promo-block .promo-subtitle {
+  max-width: 560px;
+  margin-bottom: 30px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #5f6f82;
+  letter-spacing: 0;
+}
+
+.promo-actions {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.promo-meta {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #5f6f82;
+}
+
+.promo-meta-link {
+  color: #5f6f82;
+  border-bottom: 1px solid rgba(95, 111, 130, 0.35);
+}
+
+.promo-meta-link:hover,
+.promo-meta-link:focus {
+  color: #2f6f88;
+  text-decoration: none;
+}
+
+.promo-meta-sep {
+  margin: 0 8px;
+  color: #a6b2bd;
+}
+
+/* Фото-бокс праворуч від тексту */
+.promo-photo {
+  position: relative;
+  flex: 0 0 440px;
+  width: 440px;
+  height: 560px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #e3ecf1;
+  box-shadow: 0 28px 56px rgba(31, 61, 82, 0.18);
+}
+
+.promo-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+
+.promo-photo-img.is-active {
+  opacity: 1;
+}
+
+/* Підпис-плашка внизу фото: ім'я лікаря + посада, змінюється
+   разом із фото (js у index.html додає/знімає .is-fading) */
+.promo-photo-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 46px 26px 22px;
+  background: linear-gradient(180deg, rgba(20, 40, 54, 0) 0%, rgba(15, 32, 44, 0.72) 100%);
+  color: #ffffff;
+  opacity: 1;
+  transition: opacity .22s ease;
+}
+
+.promo-photo-caption.is-fading {
+  opacity: 0;
+}
+
+.promo-photo-caption-name {
+  display: block;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.promo-photo-caption-role {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Мобільні: фото прибираємо повністю, лишається тільки текст */
+@media (max-width: 767px) {
+  .promo-photo {
+    display: none;
+  }
+}
+
+/*------------------------------------------------------------------
+    [Смуга довіри: ліцензія, НМУ, доказова медицина]
+------------------------------------------------------------------*/
+.trust-bar {
+  background: #ffffff;
+  border-bottom: 1px solid #eef3f7;
+  padding: 28px 0;
+}
+
+.trust-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.trust-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  font-size: 26px;
+  color: #2f6f88;
+}
+
+.trust-text {
+  display: block;
+}
+
+.trust-title {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #2f4d65;
+}
+
+.trust-note {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #79858f;
+}
+
+/*------------------------------------------------------------------
+    [CTA після блоку команди]
+------------------------------------------------------------------*/
+.inline-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 44px;
+  padding: 26px 32px;
+  background: #f3f9fc;
+  border: 1px solid #dceaf2;
+  border-radius: 14px;
+}
+
+.inline-cta-text {
+  flex: 1 1 320px;
+}
+
+.inline-cta-title {
+  margin: 0 0 6px;
+  font-size: 23px;
+  color: #2f4d65;
+}
+
+.inline-cta-note {
+  margin: 0;
+  font-size: 15px;
+  color: #5f6f82;
+}
+
+/*------------------------------------------------------------------
+    [Гострий біль]
+------------------------------------------------------------------*/
+.emergency {
+  background: #ffffff;
+  padding: 74px 0;
+}
+
+.emergency-inner {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  padding: 36px 40px;
+  background: linear-gradient(135deg, #fdf3ef 0%, #fbf8f5 100%);
+  border: 1px solid #f2ddd4;
+  border-left: 4px solid #c9573a;
+  border-radius: 16px;
+}
+
+.emergency-body {
+  flex: 1 1 auto;
+}
+
+.emergency-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b8472c;
+}
+
+.emergency-label-icon {
+  font-size: 15px;
+}
+
+.emergency-title {
+  margin: 0 0 12px;
+  font-size: 31px;
+  line-height: 1.2;
+  color: #2f4d65;
+}
+
+.emergency-text {
+  max-width: 640px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #5f6f82;
+}
+
+.emergency-steps {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.emergency-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #4d5b6b;
+}
+
+.emergency-step-num {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #c9573a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.emergency-action {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.emergency-hours {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: #7d8a97;
+}
+
+/*------------------------------------------------------------------
+    [Кнопки в прайсі]
+------------------------------------------------------------------*/
+#pricing .pricing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#pricing .pricing-actions .btn-theme {
+  /* basis 0 + min-width 0 -> дві кнопки завжди в один ряд, як би не звужувалась картка */
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 13px 8px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.pricing-call-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 4px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border: 1px solid #e2ecf2;
+  border-radius: 999px;
+}
+
+.pricing-call-note-text {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #42566a;
+}
+
+/*------------------------------------------------------------------
+    [Відгуки з Google]
+------------------------------------------------------------------*/
+.reviews {
+  background: #ffffff;
+}
+
+.reviews-intro {
+  font-size: 16px;
+  color: #78848f;
+}
+
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.reviews-score {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  color: #2f4d65;
+}
+
+.reviews-stars {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.reviews-count {
+  font-size: 15px;
+  color: #78848f;
+}
+
+.review-star {
+  color: #d9dfe5;
+}
+
+.review-star.is-on {
+  color: #f0a500;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e7eef3;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(47, 58, 75, 0.05);
+}
+
+.review-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-avatar-empty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f2f7;
+  color: #2f6f88;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.review-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2f4d65;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #909aa5;
+}
+
+.review-rating {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  /* Реальні відгуки з Google бувають дуже довгими — без обмеження один
+     текст роздуває весь ряд карток (за замовчуванням грід тягне сусідів
+     до тієї ж висоти). Обрізаємо на 7 рядках, довший текст читають далі
+     вже в Google за кнопкою нижче */
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: calc(1.6em * 7);
+  color: #55626f;
+}
+
+.reviews-state {
+  text-align: center;
+}
+
+.reviews-state-text {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #78848f;
+}
+
+.reviews-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.reviews .reviews-btn {
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.reviews .btn-default-bg {
+  background: #e8f2f7;
+  color: #2f5f79;
+}
+
+.reviews .btn-default-bg:hover,
+.reviews .btn-default-bg:focus {
+  background: #2f6f88;
+  color: #ffffff;
+}
+
+.reviews-attribution {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #a8b1ba;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------
+    [Контакти: телефон і графік]
+------------------------------------------------------------------*/
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #2f4d65;
+  text-decoration: none;
+}
+
+.contact-phone:hover,
+.contact-phone:focus {
+  color: #2f6f88;
+  text-decoration: none;
+}
+
+.contact-phone-icon {
+  font-size: 24px;
+  color: #2f6f88;
+}
+
+.contact-schedule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #5f6f82;
+}
+
+.contact-schedule-icon {
+  font-size: 17px;
+  color: #2f6f88;
+}
+
+/*------------------------------------------------------------------
+    [Контакти у футері]
+------------------------------------------------------------------*/
+.footer-contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  text-align: center;
+}
+
+.footer-contact-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9aa5b1;
+}
+
+.footer-contact-phone {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 700;
+  color: #2f4d65;
+}
+
+.footer-contact-phone:hover,
+.footer-contact-phone:focus {
+  color: #2f6f88;
+  text-decoration: none;
+}
+
+.footer-contact-value {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5f6f82;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: #2f6f88;
+  text-decoration: none;
+}
+
+/*------------------------------------------------------------------
+    [Плаваюча панель дзвінка на мобільних]
+------------------------------------------------------------------*/
+.mobile-call-bar {
+  display: none;
+}
+
+.mobile-call-btn,
+.mobile-book-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mobile-call-btn {
+  flex: 1 1 auto;
+  background: #2f6f88;
+  color: #ffffff !important;
+  box-shadow: 0 6px 16px rgba(47, 111, 136, 0.3);
+}
+
+.mobile-call-btn:hover,
+.mobile-call-btn:focus,
+.mobile-call-btn:active {
+  background: #26596e;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.mobile-call-icon {
+  font-size: 20px;
+}
+
+.mobile-call-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.mobile-call-label {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.mobile-call-hours {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: .85;
+}
+
+.mobile-book-btn {
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 78px;
+  padding: 8px 12px;
+  background: #eef5f9;
+  border: 1px solid #d6e5ee;
+  color: #2f5f79 !important;
+}
+
+.mobile-book-btn:hover,
+.mobile-book-btn:focus {
+  color: #2f5f79 !important;
+  text-decoration: none;
+}
+
+.mobile-book-icon {
+  font-size: 17px;
+}
+
+.mobile-book-label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .mobile-call-bar {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    gap: 8px;
+    padding: 8px 10px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 1px solid #e4ebf0;
+    box-shadow: 0 -6px 18px rgba(20, 39, 53, 0.13);
+  }
+
+  /* щоб панель не перекривала кінець сторінки */
+  body {
+    padding-bottom: 78px;
+  }
+}
+
+/*------------------------------------------------------------------
+    [Адаптив Етапу 1]
+------------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .promo-block .promo-block-title {
+    font-size: 42px;
+  }
+
+  .promo-photo {
+    flex-basis: 360px;
+    width: 360px;
+    height: 460px;
+  }
+}
+
+@media (max-width: 991px) {
+  .trust-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promo-block {
+    padding: 150px 0 80px;
+  }
+
+  .promo-inner {
+    gap: 32px;
+  }
+
+  .promo-block .promo-block-title {
+    margin-top: 0;
+    font-size: 34px;
+  }
+
+  .promo-block .promo-block-text,
+  .promo-block .promo-subtitle {
+    font-size: 17px;
+  }
+
+  .promo-photo {
+    flex-basis: 300px;
+    width: 300px;
+    height: 390px;
+  }
+
+  .promo-photo-caption {
+    padding: 36px 20px 18px;
+  }
+
+  .promo-photo-caption-name {
+    font-size: 17px;
+  }
+
+  .emergency-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+  }
+
+  .emergency-action {
+    width: 100%;
+    text-align: left;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  /* Фото ховається (.promo-photo { display:none } вище), лишається текст */
+  .promo-block {
+    padding: 128px 0 64px;
+  }
+
+  .promo-content {
+    max-width: 100%;
+  }
+
+  .promo-block .promo-block-title {
+    margin-top: 0;
+    font-size: 31px;
+  }
+
+  .promo-block .promo-block-text,
+  .promo-block .promo-subtitle {
+    margin-bottom: 24px;
+    font-size: 16.5px;
+  }
+
+  .promo-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-call-lg {
+    justify-content: center;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .btn-book-lg {
+    padding: 15px 24px;
+  }
+
+  .trust-bar {
+    padding: 22px 0;
+  }
+
+  .trust-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .inline-cta {
+    padding: 22px 20px;
+    text-align: left;
+  }
+
+  .inline-cta-title {
+    font-size: 21px;
+  }
+
+  .inline-cta .btn-call {
+    width: 100%;
+  }
+
+  .emergency {
+    padding: 56px 0;
+  }
+
+  .emergency-inner {
+    padding: 26px 20px;
+  }
+
+  .emergency-title {
+    font-size: 26px;
+  }
+
+  .emergency-action {
+    width: 100%;
+  }
+
+  .emergency-action .btn-call-lg {
+    width: 100%;
+  }
+
+  .pricing-call-note {
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 16px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-actions .reviews-btn {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .contact-phone {
+    font-size: 27px;
+  }
+
+  .contact-schedule {
+    font-size: 16px;
+  }
+
+  .footer-contact {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+/*------------------------------------------------------------------
+    [Правки після візуальної перевірки Етапу 1]
+------------------------------------------------------------------*/
+
+/* Перший екран тепер світлий, тому біле меню на ньому не читалося */
+.header .nav-item-child {
+  color: #3c5a72;
+  text-shadow: none;
+}
+
+.header .nav-item-child:hover,
+.header .nav-item-child:focus {
+  color: #2f6f88;
+}
+
+@media (min-width: 992px) {
+  /* Порядок у шапці: логотип — меню — телефон */
+  .header .navbar > .container > .menu-container.js_nav-item {
+    order: 1;
+  }
+
+  .header .navbar > .container > .nav-collapse {
+    order: 2;
+  }
+
+  .header .navbar > .container > .header-contact {
+    order: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Адреса й графік окремими рядками, щоб не рвалися посередині */
+  .promo-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .promo-meta-sep {
+    display: none;
+  }
+
+  .promo-meta-link {
+    align-self: flex-start;
+  }
+}
+
+/*------------------------------------------------------------------
+    [Бургер-меню до 1199px]
+    У контейнер 970px (992-1199px) шість пунктів меню разом із
+    телефоном уже не вміщуються й розривають шапку на два рядки,
+    тому в цьому діапазоні меню теж ховається під кнопку.
+------------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .header {
+    background: #fff;
+  }
+
+  .header .navbar-toggle {
+    display: block;
+    float: none;
+    margin: 0;
+  }
+
+  .header .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .header .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .header .nav-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header .navbar-nav,
+  .header .navbar-nav-right {
+    margin: 0;
+    float: none;
+  }
+
+  .header .navbar-nav .nav-item {
+    float: none;
+  }
+
+  .header .logo {
+    float: none;
+    width: auto;
+    height: auto;
+    line-height: 1;
+  }
+
+  .header .logo .logo-img-main {
+    display: none;
+  }
+
+  .header .logo .logo-img-active {
+    display: inline-block;
+  }
+
+  .header .nav-item-child {
+    color: #3c5a72;
+    line-height: 1.4;
+    padding: 12px 12px 12px 15px;
+  }
+
+  .header .nav-item-hover:after {
+    position: absolute;
+    top: 19px;
+  }
+
+  .header .navbar > .container {
+    flex-wrap: wrap;
+  }
+
+  .header .navbar > .container > .menu-container.js_nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    order: 1;
+  }
+
+  .header .navbar > .container > .header-contact {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .header .navbar > .container > .nav-collapse {
+    order: 3;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+/*------------------------------------------------------------------
+    [Скидання глобального стилю span всередині нових блоків]
+    У темі є правило span { font-size:14px; font-weight:400;
+    color:#bfc1c7 }, через яке номери телефонів усередині кнопок і
+    посилань втрачали розмір, жирність і колір. :where() має нульову
+    вагу, тож власні класи нижче спокійно його перекривають.
+------------------------------------------------------------------*/
+:where(.btn-call, .btn-book, .header-phone, .contact-phone, .promo-meta,
+  .mobile-call-btn, .mobile-book-btn, .trust-item, .footer-contact,
+  .emergency, .review-card, .reviews-summary, .inline-cta,
+  .pricing-call-note) span {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/*------------------------------------------------------------------
+    [Меню на десктопі не переносить пункти]
+    Пункти меню у темі — float, тож шостий пункт зривався на другий
+    рядок і накладався на контент. Flex із nowrap це виключає.
+------------------------------------------------------------------*/
+@media (min-width: 1200px) {
+  .header .navbar > .container > .nav-collapse {
+    min-width: 0;
+  }
+
+  .header .navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    float: none;
+  }
+
+  .header .navbar-nav .nav-item {
+    float: none;
+    flex: 0 0 auto;
+  }
+
+  .header .nav-item-child {
+    /* 20px по вертикалі + line-height 55px = висота шапки 95px, як у логотипа */
+    padding: 20px 9px;
+    white-space: nowrap;
+  }
+}
+
+/*==================================================================
+    [ЄДИНА СТИЛІСТИКА ПО ВСЬОМУ САЙТУ]
+    До цього моменту в темі та в різних правках назбиралось шість
+    відтінків темного наві (#515769, #2f3a4b, #344458, #435063...)
+    і стільки ж відтінків сірого для звичайного тексту — картки з
+    різних секцій виглядали як з різних сайтів. Зводимо все до двох
+    кольорів: --ink для заголовків/акцентів, --muted для звичайного
+    тексту, і до однієї "картки" (білий фон, тонка рамка, радіус 16px,
+    тінь при наведенні), яку використовують і трастбар, і "чому ми",
+    і команда, і прайс, і відгуки.
+==================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2f4d65;
+}
+
+p {
+  color: #5f6f82;
+}
+
+/*------------------------------------------------------------------
+    [Трастбар: та сама іконка-бейдж і ті самі кольори тексту,
+    що й у картках нижче — лишається тонкою смугою, не карткою,
+    бо це прямий перехід від hero, а не окрема секція]
+------------------------------------------------------------------*/
+.trust-item {
+  padding: 20px;
+}
+
+.trust-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-top: 0;
+  font-size: 19px;
+  color: #2f6f88;
+  background: #eaf3f7;
+  border-radius: 50%;
+}
+
+.trust-title {
+  color: #2f4d65;
+}
+
+/*------------------------------------------------------------------
+    [Три картки "Оплата за результат / Підхід / Команда" — той самий
+   каркас, що й трастбар: іконка в кольоровому бейджі, заголовок 20px,
+   текст 15px, замість колишніх 34px і майже чорного кольору */
+.why-choose-item {
+  border-radius: 16px;
+}
+
+.why-choose-icon {
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 22px;
+  color: #2f6f88;
+  background: #eaf3f7;
+  border-color: #eaf3f7;
+  margin-right: 16px;
+}
+
+.why-choose-item h3 {
+  color: #2f4d65;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.why-choose-item p {
+  color: #5f6f82;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/*------------------------------------------------------------------
+    [Команда — вирівнюємо колір імені та тексту картки]
+------------------------------------------------------------------*/
+.team-name {
+  color: #2f4d65;
+}
+
+#team .team-member p {
+  color: #5f6f82;
+  font-size: 15px;
+}
+
+/*------------------------------------------------------------------
+    [Футер — вирівнюємо заголовок соцмереж]
+------------------------------------------------------------------*/
+.footer-social-title {
+  color: #2f4d65;
+}
+
+@media (max-width: 991px) {
+  .why-choose-item h3 {
+    font-size: 19px;
+  }
+
+  .why-choose-item p {
+    font-size: 15px;
+  }
+}
