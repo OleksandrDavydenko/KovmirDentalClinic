@@ -300,23 +300,17 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Pricing]
 ------------------------------------------------------------------*/
+/* Було: застарілий блок стилів "pricing table" з теми, який мали намір
+   закоментувати повністю, але вкладений коментар усередині закрив
+   зовнішній зарано (CSS-коментарі не вкладаються одне в одне) — тому
+   друга половина властивостей, включно з align-items: center, лишалась
+   активною. Через це контейнер кнопок у картці не розтягувався на всю
+   ширину, а стискався до мінімального вмісту — звідти й переповнення
+   тексту "Уточнити ціну". Реальні стилі карток задані нижче, у правилі
+   #pricing .pricing; тут лишаємо тільки те, що ніде більше не задається */
 .pricing {
-/*   padding: 70px 45px;
   background: #fff;
-  margin-top: 50px;
-  transition: padding 0.3s, margin 0.3s; /* Додаємо плавну анімацію для зміни padding і margin */ 
-  padding: 40px 35px;
-  background: #fff;
-  margin-top: 20px;
-  transition: padding 0.3s, margin 0.3s; /* Додаємо плавну анімацію для зміни padding і margin */ 
-  cursor: pointer;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 250px;
   position: relative;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -2934,7 +2928,7 @@ h2 {
   /* basis 0 + min-width 0 -> дві кнопки завжди в один ряд, як би не звужувалась картка */
   flex: 1 1 0;
   min-width: 0;
-  padding: 13px 8px;
+  padding: 13px 14px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
@@ -3377,6 +3371,14 @@ h2 {
 
   .promo-photo-caption-name {
     font-size: 17px;
+  }
+
+  /* На 768–991px контейнер Bootstrap фіксований (750px), і при 3 картках
+     в ряд на кнопку лишається ~85px — "Уточнити ціну" туди не влазить
+     навіть меншим шрифтом. Простіше й надійніше поставити кнопки одну
+     під одною на всю ширину картки */
+  #pricing .pricing-actions {
+    flex-direction: column;
   }
 
   .emergency-inner {
